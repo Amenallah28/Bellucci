@@ -4,13 +4,22 @@ import { initializeApp, getApps } from "firebase/app";
 import { initializeAuth, getReactNativePersistence, getAuth } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+import {
+  FIREBASE_API_KEY,
+  FIREBASE_AUTH_DOMAIN,
+  FIREBASE_PROJECT_ID,
+  FIREBASE_STORAGE_BUCKET,
+  FIREBASE_MESSAGING_SENDER_ID,
+  FIREBASE_APP_ID
+} from '@env';
+
 const firebaseConfig = {
-  apiKey: "AIzaSyC4nThxrCugNMglcrmdFwAIUkclr46pNkE",
-  authDomain: "bellucci-1c6ee.firebaseapp.com",
-  projectId: "bellucci-1c6ee",
-  storageBucket: "bellucci-1c6ee.appspot.com",
-  messagingSenderId: "217583982804",
-  appId: "1:217583982804:web:7530d415cfb00971744341"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+  appId: FIREBASE_APP_ID,
 };
 
 // Avoid re-initializing
