@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
-export default function AuthScreen() {
+export default function AuthScreen({ navigation }) {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +15,7 @@ export default function AuthScreen() {
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
       }
+      navigation.replace('Home'); // Navigate to home      
     } catch (error) {
       alert(error.message);
     }
