@@ -15,7 +15,7 @@ export default function AuthScreen({ navigation }) {
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
       }
-      navigation.replace('Home'); // Navigate to home      
+      navigation.replace('Main'); // Navigate to home      
     } catch (error) {
       alert(error.message);
     }
